@@ -5,29 +5,31 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.css'
 import Landing from '../../components/Landing'
+import Picker from '../../components/Picker'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const [current, setCurrent] = useState();
+  const [current, setCurrent] = useState("welcome");
   const welcomeRef = useRef();
   const aboutRef = useRef();
   const workRef = useRef();
   const contactRef = useRef();
 
-  const scrollTo = (ref) => {
-    console.log('helllo')
+  const scrollTo = (ref, curr) => {
+    setCurrent(curr)
     ref.current.scrollIntoView({behavior: "smooth"});
   }
 
   return (
     <main>
-      <div className='pickerContainer'>
-        <div onClick={() => scrollTo(welcomeRef)} className='choiceContainer'><div className='choice'/></div>
-        <div onClick={() => scrollTo(aboutRef)} className='choiceContainer'><div className='choice'/></div>
-        <div onClick={() => scrollTo(workRef)} className='choiceContainer'><div className='choice'/></div>
-        <div onClick={() => scrollTo(contactRef)} className='choiceContainer'><div className='choice'/></div>
-      </div>
+      <Picker welcomeRef={welcomeRef} 
+              aboutRef={aboutRef} 
+              workRef={workRef} 
+              contactRef={contactRef} 
+              scrollTo={scrollTo}
+              current={current}
+      />
       <div className='landingContainer'>
         <div ref={welcomeRef}><Landing name={"Welcome"}/></div>
         <div ref={aboutRef}><Landing name={"About"}/></div>

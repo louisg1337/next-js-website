@@ -1,0 +1,24 @@
+.pickerContainer {
+    position: absolute;
+    width: 5vw;
+    height: 20vh;
+    top: 40%;
+    left: 3%;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.choiceContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice {
+    width: 15px;
+    height: 15px;
+    border: solid;
+    transform: rotate(45deg)
+}
