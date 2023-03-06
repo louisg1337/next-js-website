@@ -1,0 +1,35 @@
+.landingContainer {
+    position: relative;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    width: 100%;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+.pickerContainer {
+    position: absolute;
+    width: 5vw;
+    height: 20vh;
+    top: 45%;
+    left: 3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.choiceContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choice {
+    width: 15px;
+    height: 15px;
+    border: solid;
+    transform: rotate(45deg)
+}

@@ -1,4 +1,5 @@
 import './globals.css'
+import './layout.css'
 
 export const metadata = {
   title: 'Create Next App',
@@ -8,7 +9,23 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head/>
+      <body>
+        <nav className="navbar">
+          <div className="logo"></div>
+          <div className="wrapper">
+            <ul>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Work</a>
+              </li>
+            </ul>
+          </div>  
+        </nav>
+        {children}
+      </body>
     </html>
   )
 }
