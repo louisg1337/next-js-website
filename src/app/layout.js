@@ -16,10 +16,13 @@ export default function RootLayout({ children }) {
           <div className="wrapper">
             <ul>
               <li>
-                <a href="#">About</a>
+                <a href="#" className="navText">About</a>
               </li>
               <li>
-                <a href="#">Work</a>
+                <a href="#" className="navText">Work</a>
+              </li>
+              <li>
+                <a href="#" className="navText">Contact</a>
               </li>
             </ul>
           </div>  

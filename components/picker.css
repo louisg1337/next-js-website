@@ -19,6 +19,6 @@
 .choice {
     width: 15px;
     height: 15px;
-    border: solid;
+    border: solid #FF8484;
     transform: rotate(45deg);
 }

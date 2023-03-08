@@ -1,0 +1,39 @@
+.card {
+    border: solid #B8A8BA;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    position: relative;
+}
+
+.titleText {
+    font-size: clamp(1rem, 10vw, 2rem);
+}
+
+.roleText {
+    font-size: clamp(0.5rem, 10vw, 1rem);
+    margin-bottom: 5%;
+}
+
+.descriptionText {
+    font-size: 100%;
+}
+
+.techWrapper {
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+}
+
+.techText{
+    text-align: end;
+    font-size: clamp(0.5rem, 10vw, 1rem);
+}
+
+.techContainer {
+    display: inline-block;
+    margin-right: 3%;
+
+}

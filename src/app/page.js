@@ -4,8 +4,10 @@ import { useRef, useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.css'
+
 import Landing from '../../components/Landing'
 import Picker from '../../components/Picker'
+import Work from '../../components/work/Work'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,8 +32,6 @@ export default function Home() {
   const getscroll = () => {
     const sectionHeight = welcomeRef.current.offsetHeight;
     const scrollPos = bodyRef.current.scrollTop + sectionHeight;
-    console.log(sectionHeight)
-    console.log(scrollPos)
 
     if (scrollPos <= currentPos || scrollPos >= currentPos) {
       // Find next section
@@ -55,8 +55,8 @@ export default function Home() {
       />
       <div ref={bodyRef} className='landingContainer' onScroll={getscroll}>
         <div ref={welcomeRef}><Landing name={"Welcome"}/></div>
-        <div ref={aboutRef}><Landing name={"About"}/></div>
-        <div ref={workRef}><Landing name={"Work"}/></div>
+        <div ref={aboutRef}><Landing /></div>
+        <div ref={workRef}><Work/></div>
         <div ref={contactRef}><Landing name={"Contact"}/></div>
       </div>
     </main>

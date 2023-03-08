@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import './picker.css'
 
 export default function Picker({welcomeRef, aboutRef, workRef, contactRef, scrollTo, current}) {
-    const buttonColor = 'white';
+    const buttonColor = '#FF8484';
 
     return (
         <div className='pickerContainer'>

@@ -1,0 +1,43 @@
+.workContainer {
+    padding: 5%;
+    width: 80%;
+    height: 90%;
+    padding-top: 10%;
+}
+
+.titleContainer {
+    width: 70%;
+    height: 15%;
+    margin: 0 auto;
+}
+
+.titleText {
+    font-size: clamp(2rem, 10vw, 3rem);
+}
+
+.cardContainer {
+    width: 70%;
+    height: 65%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.workChoiceContainer {
+    height: 100%;
+    width: 25%;
+}
+
+.workTitleContainer {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    border-left: solid #B8A8BA;
+    padding-left: 10%;
+}
+
+
+.workSelectionContainer {
+    width: 80%;
+    height: 100%;
+}

@@ -1,8 +1,8 @@
 .navbar {
     display: flex;
     width: 100%;
-    border-bottom:solid;
     position:fixed;
+    z-index: 1000;
 }
 
 ul {
@@ -11,7 +11,6 @@ ul {
 
 .logo {
     width: 10%;
-    background-color: aqua;
     height: 100%;
 }
 
@@ -23,8 +22,11 @@ ul {
 
 li {
   float: left;
-  color: #f2f2f2;
   text-align: center;
   padding: 14px;
   text-decoration: none;
+}
+
+.navText {
+    color: #FF8484
 }
