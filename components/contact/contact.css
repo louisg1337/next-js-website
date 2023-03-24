@@ -1,0 +1,35 @@
+.ctaContainer {
+    width: 35%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 4%;
+    padding-bottom: 5%;
+}
+
+.contactContainer {
+    width: 35%;
+    height: 60%;
+    border: solid;
+    border-top-right-radius: 5%;
+    border-bottom-right-radius: 5%;
+}
+
+
+.emailContainer {
+    height: 80%;
+    padding: 5%;
+}
+
+.iconContainer {   
+    height: 20%;
+    display: flex;
+}
+
+.icon {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

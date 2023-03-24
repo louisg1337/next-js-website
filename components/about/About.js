@@ -15,7 +15,7 @@ export default function About(){
                     </div>
                 </div>
                 <div className="avatarContainer">
-
+                
                 </div>
             </div>
         </div>

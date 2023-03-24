@@ -10,7 +10,7 @@ export default function Card({title, role, description, technologies}) {
             <div className="techWrapper">
                 {technologies?.map((val, i) => {
                     return (
-                        <div className='techContainer'>
+                        <div key={i} className='techContainer'>
                             <p className='techText' key={i}>{val}</p>
                         </div>
                     )
