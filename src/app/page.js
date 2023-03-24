@@ -8,6 +8,7 @@ import styles from './page.css'
 import Landing from '../../components/Landing'
 import Picker from '../../components/Picker'
 import Work from '../../components/work/Work'
+import About from '../../components/about/About'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -55,7 +56,7 @@ export default function Home() {
       />
       <div ref={bodyRef} className='landingContainer' onScroll={getscroll}>
         <div ref={welcomeRef}><Landing name={"Welcome"}/></div>
-        <div ref={aboutRef}><Landing /></div>
+        <div ref={aboutRef}><About/></div>
         <div ref={workRef}><Work/></div>
         <div ref={contactRef}><Landing name={"Contact"}/></div>
       </div>

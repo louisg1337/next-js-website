@@ -1,0 +1,21 @@
+.aboutContainer {
+    width: 80%;
+    height: 80%;
+    display: flex;
+}
+
+.bioContainer {
+    padding-left: 5%;
+    padding-right: 5%;
+    width: 50%;
+    border-right: solid;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+}
+
+.avatarContainer {
+    width: 50%;
+}

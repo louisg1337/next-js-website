@@ -20,10 +20,9 @@ export default function Work(){
                         <div className='workChoiceContainer'>
                             {workData.map((val, i) => {
                                 return (
-                                    <div onMouseEnter={() => setHover(val.title)} 
+                                    <div key={i} onMouseEnter={() => setHover(val.title)} 
                                         onMouseLeave={() => setHover(null)} 
                                         onClick={() => setSelected(val)}
-                                        key={i} 
                                         style={selected.title == val.title ? {borderLeftColor: '#FF8484', borderLeftWidth: 3} : {}} 
                                         className='workTitleContainer'>
                                         <p style={selected.title == val.title || hovered == val.title ? {color: '#FF8484'} : {}}>{val.title}</p>
