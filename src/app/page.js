@@ -5,11 +5,12 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from './page.css'
 
-import Landing from '../../components/Landing'
-import Picker from '../../components/Picker'
+import Landing from '../../components/landing/Landing'
+import Picker from '../../components/picker/Picker'
 import Work from '../../components/work/Work'
 import About from '../../components/about/About'
 import Contact from '../../components/contact/Contact'
+import Stars from '../../components/stars/Stars'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -55,6 +56,9 @@ export default function Home() {
               scrollTo={scrollTo}
               current={current}
       />
+      <div className="starContainer">
+        <Stars />
+      </div>
       <div ref={bodyRef} className='landingContainer' onScroll={getscroll}>
         <div ref={welcomeRef}><Landing name={"Welcome"}/></div>
         <div ref={aboutRef}><About/></div>

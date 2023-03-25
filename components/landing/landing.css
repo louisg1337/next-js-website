@@ -1,7 +1,10 @@
 .wrapperSection {
-    width: 80%;
+    width: 50%;
     height: 45%;
     padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nameText {
@@ -24,10 +27,23 @@
 }
 
 .introTextWrapper {
-    width: 50%;
+    width: 80%;
     margin-top: 2%;
 }
 
 .introText {
     font-size: clamp(0.5rem, 6vw, 1rem);
+}
+
+.planetContainer {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.planet {
+    width: 50%;
+    height: 50%;
 }

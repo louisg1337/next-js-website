@@ -7,6 +7,12 @@
     width: 100%;
     -ms-overflow-style: none;
     scrollbar-width: none;
-    background-color: black;
+    background-color: none;
 
+}
+
+.starContainer {
+    position: absolute;
+    width: 100%;
+    height: 400%;
 }
