@@ -23,9 +23,9 @@ export default function Work(){
                                     <div key={i} onMouseEnter={() => setHover(val.title)} 
                                         onMouseLeave={() => setHover(null)} 
                                         onClick={() => setSelected(val)}
-                                        style={selected.title == val.title ? {borderLeftColor: '#FF8484', borderLeftWidth: 3} : {}} 
+                                        style={selected.title == val.title ? {borderLeftColor: '#FF8484', borderLeftWidth: 3, transition: "border-left-color 0.4s ease"} : {}} 
                                         className='workTitleContainer'>
-                                        <p style={selected.title == val.title || hovered == val.title ? {color: '#FF8484'} : {}}>{val.title}</p>
+                                        <p style={selected.title == val.title || hovered == val.title ? {color: '#FF8484', transition: "color 0.4s ease"} : {}}>{val.title}</p>
                                     </div>
                                 )
                             })}

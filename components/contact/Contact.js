@@ -10,7 +10,7 @@ export default function Contact(){
             <div className="ctaContainer">
                 <div>
                     <h1 style={{marginBottom: '5%'}}>Did I catch your eye?</h1>
-                    <p>I say we keep in touch and do some work together in the future! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                    <p>I love to meet people, so feel free to send a quick message and maybe one day we can work together!</p>
                 </div>
             </div>
             <div className="contactContainer">
@@ -19,14 +19,14 @@ export default function Contact(){
                 </div>
                 <div className='iconContainer'>
                     <div className='icon'>
-                        <div className='iconWrapper'>
-                            <FiGithub size={'50%'} color="white" />
-                        </div>
+                        <a className="iconWrapper" href="https://github.com/louisg1337" target="_blank">
+                                <FiGithub size={'50%'} color="white" />
+                        </a>
                     </div>
                     <div className='icon'>
-                        <span className='iconWrapper'>
-                            <FiLinkedin size={'50%'} color="white" />
-                        </span>
+                        <a className="iconWrapper" href="https://www.linkedin.com/in/louis-grassi-34235b219/" target="_blank">
+                                <FiLinkedin size={'50%'} color="white" />
+                        </a>
                     </div> 
                 </div>
             </div>
