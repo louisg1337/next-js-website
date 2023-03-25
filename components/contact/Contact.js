@@ -19,10 +19,14 @@ export default function Contact(){
                 </div>
                 <div className='iconContainer'>
                     <div className='icon'>
-                        <FiGithub size={'35%'} />
+                        <div className='iconWrapper'>
+                            <FiGithub size={'50%'} color="white" />
+                        </div>
                     </div>
                     <div className='icon'>
-                        <FiLinkedin size={'35%'} />
+                        <span className='iconWrapper'>
+                            <FiLinkedin size={'50%'} color="white" />
+                        </span>
                     </div> 
                 </div>
             </div>
