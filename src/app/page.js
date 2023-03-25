@@ -1,9 +1,8 @@
 "use client"
 
-import { useRef, useState, useEffect } from 'react'
-import Image from 'next/image'
+import { useRef, useState, useMemo } from 'react'
 import { Inter } from 'next/font/google'
-import styles from './page.css'
+import './page.css'
 
 import Landing from '../../components/landing/Landing'
 import Picker from '../../components/picker/Picker'
@@ -47,6 +46,8 @@ export default function Home() {
     } 
   };
 
+  const starDisplay = useMemo(() => <Stars />, []);
+
   return (
     <main>
       <Picker welcomeRef={welcomeRef} 
@@ -57,7 +58,7 @@ export default function Home() {
               current={current}
       />
       <div className="starContainer">
-        <Stars />
+        {starDisplay}
       </div>
       <div ref={bodyRef} className='landingContainer' onScroll={getscroll}>
         <div ref={welcomeRef}><Landing name={"Welcome"}/></div>
