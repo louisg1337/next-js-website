@@ -1,24 +1,36 @@
-import { useEffect } from 'react';
 import { motion } from "framer-motion"
 import './picker.css'
 
 export default function Picker({welcomeRef, aboutRef, workRef, contactRef, scrollTo, current}) {
-    const buttonColor = '#FF8484';
+    const data = ["welcome", "about", "work", "contact"]
 
     return (
         <div className='pickerContainer'>
-            <div onClick={() => scrollTo(welcomeRef, "welcome")} className='choiceContainer'>
-                <div style={current == "welcome" ? {backgroundColor: buttonColor, transition: 'background-color 0.4s ease'} : {}} className='choice'/>
-            </div>
-            <div onClick={() => scrollTo(aboutRef, "about")} className='choiceContainer'>
-                <div style={current == "about" ? {backgroundColor: buttonColor, transition: 'background-color 0.4s ease'} : {}} className='choice'/>
-            </div>
-            <div onClick={() => scrollTo(workRef, "work")} className='choiceContainer'>
-                <div style={current == "work" ? {backgroundColor: buttonColor, transition: 'background-color 0.4s ease'} : {}}className='choice'/>
-            </div>
-            <div onClick={() => scrollTo(contactRef, "contact")} className='choiceContainer'>
-                <div style={current == "contact" ? {backgroundColor: buttonColor, transition: 'background-color 0.4s ease'} : {}} className='choice'/>
-            </div>
+            {data.map((item, key) => {
+                let ref = null;
+                switch(item){
+                    case "welcome":
+                        ref = welcomeRef;
+                    case "about":
+                        ref = aboutRef;
+                    case "work":
+                        ref = workRef;
+                    case "contact":
+                        ref = contactRef
+                }
+
+                return (
+                    <Node key={key} name={item} ref={ref} scrollTo={scrollTo} current={current}/>
+                )
+            })}
       </div>
     )
+}
+
+const Node = ({name, ref, scrollTo, current}) => {
+    return (
+        <div onClick={() => scrollTo(ref, name)} className='choiceContainer'>
+            <motion.div animate={{rotate: 90}} style={current == name ? {backgroundColor: '#FF8484', transition: 'background-color 0.4s ease'} : {}} className='choice'/>
+        </div>
+    );
 }

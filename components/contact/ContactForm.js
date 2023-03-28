@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 
 export default function ContactForm() {
-    const [email, setEmail] = useState("");
+    const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
 
     const formContainer = {
@@ -36,10 +36,10 @@ export default function ContactForm() {
             <motion.h1 variants={forms}>Contact me!</motion.h1>
             <motion.input 
                 variants={forms}
-                name="email" 
-                value={email} 
-                placeholder="Email" 
-                onChange={(e) => setEmail(e.target.value)} 
+                name="subject" 
+                value={subject} 
+                placeholder="Subject" 
+                onChange={(e) => setSubject(e.target.value)} 
                 className="input"
             />
             <motion.textarea 
@@ -50,7 +50,14 @@ export default function ContactForm() {
                 onChange={(e) => setMessage(e.target.value)} 
                 className="message"
             />
-            <motion.button variants={forms} whileHover={{scale: 1.1}} className="submitButton" onClick={() => console.log("sent " + name + " " + message)}>Send</motion.button>
+            <motion.a 
+                href={`mailto:louisgrassi1337@gmail.com?subject=${subject || ""}&body=${message || ""}`}
+                variants={forms} 
+                whileHover={{scale: 1.1}} 
+                className="submitButton" 
+            >
+                Send
+            </motion.a>
         </motion.div>
     )
 }
