@@ -25,7 +25,7 @@ const Star = () => {
 export default function Stars() {
 
     return (
-        <Canvas camera={{ position: [0, 0, 1]}}>
+        <Canvas camera={{ position: [-1, 0, 1]}}>
             <Suspense fallback={null}>
                 <Star />
             </Suspense>

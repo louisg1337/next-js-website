@@ -7,11 +7,21 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+
+  // const scrollToPosition = (position) => {
+  //   const height = window.innerHeight;
+  //   window.scrollTo({
+  //     top: height * position,
+  //     left: 0,
+  //     behavior: 'smooth' // Add this line to smoothly scroll to the position
+  //   });
+  // }
+
   return (
     <html lang="en">
       <head/>
       <body>
-        <nav className="navbar">
+        {/* <nav className="navbar">
           <div className="logo"></div>
           <div className="wrapper">
             <ul>
@@ -26,7 +36,7 @@ export default function RootLayout({ children }) {
               </li>
             </ul>
           </div>  
-        </nav>
+        </nav> */}
         {children}
       </body>
     </html>

@@ -3,13 +3,14 @@ import './landing.css';
 
 import Planet from '../planet/Planet';
 import { TypeAnimation } from 'react-type-animation';
+import { motion } from 'framer-motion';
 
 export default function Landing({name}) {
 
     return (
         <div className="section">
             <div className="wrapperSection">
-                <div style={{marginLeft: '20%'}}>
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{duration: 2}} style={{marginLeft: '20%'}}>
                     <h1 className="nameText">Hi, I'm Louis.</h1>
                     <div className="defineWrapper">
                         <h2 className='defineText'>I am a</h2>
@@ -27,7 +28,6 @@ export default function Landing({name}) {
                         wrapper="div"
                         cursor={true}
                         repeat={Infinity}
-                        style={{ fontSize: "clamp(1rem, 8vw, 3rem)", color: '#FF8484', fontFamily: 'Arial', textDecorationLine:'underline', fontWeight: 'bold'}}
                         className="typeAnimation"
                         />
                     </div>
@@ -39,12 +39,12 @@ export default function Landing({name}) {
                             and hone my skills.
                         </p>
                     </div>
-                </div>
+                </motion.div>
             </div>
             <div className='planetContainer'>
-                <div className='planet'>
+                <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{duration: 2}} className='planet'>
                     <Planet />
-                </div>
+                </motion.div>
             </div>
         </div>
     );

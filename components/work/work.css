@@ -34,10 +34,20 @@
     align-items: center;
     border-left: solid #B8A8BA;
     padding-left: 10%;
+    cursor: pointer;
 }
-
 
 .workSelectionContainer {
     width: 80%;
     height: 100%;
+}
+
+.typeAnimation {
+    font-size: clamp(1rem, 8vw, 3rem);
+    color: #FF8484;
+    font-family: Arial; 
+    text-decoration-style: underline;
+    font-weight: bold; 
+    margin-left: 1.5%;
+    margin-top: 0.8%;
 }
