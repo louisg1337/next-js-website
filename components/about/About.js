@@ -1,6 +1,8 @@
 import '../section.css';
 import './about.css';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
+import portraitImage from '../../public/portrait.jpeg'
 
 export default function About(){
 
@@ -17,13 +19,30 @@ export default function About(){
                             finger tips now, I have been non-stop creating, all of which you can see down below in my projects section.
                         </p>
                         <p>
-                            When I'm not building or creating you can find me outside, either in the gym or in nature. I love exercise
-                            of all types, whether it is weight lifting or long nature walks on new trails around me.
+                            When I'm not building or creating you can find me either in the gym or in nature. Exercising is by far my
+                            favorite thing to do and is something I hold dear to me. When paired with some good weather and a nice view,
+                            I feel like I'm in heaven.
                         </p>
                     </motion.div>
                 </div>
                 <div className="avatarContainer">
-                
+                    <motion.div 
+                    initial={{opacity: 0, scale: 0}}
+                    whileInView={{
+                        scale: 1,
+                        opacity: 1,
+                    }}
+                    viewport={{once: true}}
+                    transition={{
+                        duration: 2,
+                        type: 'spring'
+                    }}
+                    whileHover={{
+                        scale: 1.1
+                    }}
+                    className="imageContainer">
+                        <Image src={portraitImage} className="image" />
+                    </motion.div>
                 </div>
             </div>
         </div>

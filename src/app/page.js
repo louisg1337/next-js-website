@@ -1,6 +1,6 @@
 "use client"
 
-import { useRef, useState, useMemo } from 'react'
+import { useRef, useState, useMemo, useEffect } from 'react'
 import { Inter } from 'next/font/google'
 import './page.css'
 
@@ -15,7 +15,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [current, setCurrent] = useState("welcome");
-  const [currentPos, setCurrentPos] = useState(0)
+  const [currentPos, setCurrentPos] = useState(0);
+  const [width, setWidth] = useState(window.innerWidth);
   const queue = ['welcome', 'about', 'work', 'contact'];
 
   const bodyRef = useRef();
@@ -25,6 +26,18 @@ export default function Home() {
   const contactRef = useRef();
 
 
+  function handleWindowSizeChange() {
+      setWidth(window.innerWidth);
+  }
+
+  useEffect(() => {
+      window.addEventListener('resize', handleWindowSizeChange);
+      return () => {
+          window.removeEventListener('resize', handleWindowSizeChange);
+      }
+  }, []);
+  
+  const isMobile = width <= 768;
 
   const scrollTo = (ref, curr) => {
     // setCurrent(curr)
@@ -50,22 +63,33 @@ export default function Home() {
 
   return (
     <main>
-      <Picker welcomeRef={welcomeRef} 
-              aboutRef={aboutRef} 
-              workRef={workRef} 
-              contactRef={contactRef} 
-              scrollTo={scrollTo}
-              current={current}
-      />
-      <div className="starContainer">
-        {starDisplay}
-      </div>
-      <div ref={bodyRef} className='landingContainer' onScroll={getscroll}>
-        <div ref={welcomeRef}><Landing name={"Welcome"}/></div>
-        <div ref={aboutRef}><About/></div>
-        <div ref={workRef}><Work/></div>
-        <div ref={contactRef}><Contact/></div>
-      </div>
+      {isMobile ?
+        <div style={{height: '100%'}}>
+          <div className="starContainer">
+            {starDisplay}
+          </div>
+          <h1 style={{textAlign: 'center', paddingTop: '50%'}}>Mobile version coming soon!</h1>
+        </div>
+      :
+      <>
+        <Picker welcomeRef={welcomeRef} 
+                aboutRef={aboutRef} 
+                workRef={workRef} 
+                contactRef={contactRef} 
+                scrollTo={scrollTo}
+                current={current}
+        />
+        <div className="starContainer">
+          {starDisplay}
+        </div>
+        <div ref={bodyRef} className='landingContainer' onScroll={getscroll}>
+          <div ref={welcomeRef}><Landing name={"Welcome"}/></div>
+          <div ref={aboutRef}><About/></div>
+          <div ref={workRef}><Work/></div>
+          <div ref={contactRef}><Contact/></div>
+        </div>
+      </>
+      }
     </main>
   )
 }
