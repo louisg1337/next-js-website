@@ -2,7 +2,7 @@
 
 import { useRef, useState, useMemo, useEffect } from 'react'
 import { isMobile } from "react-device-detect";
-import { Inter } from 'next/font/google'
+import Head from 'next/head';
 import './page.css'
 
 import Landing from '../../components/landing/Landing'
@@ -61,6 +61,13 @@ export default function Home() {
 
   return (
     <main>
+      <Head>
+        <title>Louis Grassi | Developer</title>
+        <meta
+          name="description"
+          content="Personal portfolio for aspiring software engineer Louis Grassi."
+        />
+      </Head>
       {isMobile || width <= 800 ?
         <div style={{height: '100%'}}>
           <div className="starContainer">
