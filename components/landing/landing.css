@@ -8,7 +8,7 @@
 }
 
 .nameText {
-    font-size: clamp(2rem, 10vw, 4rem);
+    font-size: clamp(2rem, 10vw, 3.5rem);
 }
 
 .defineWrapper {
@@ -47,4 +47,19 @@
 .planet {
     width: 50%;
     height: 50%;
+}
+
+@media only screen and (max-width: 1400px) {
+    .defineWrapper {
+        display: block;
+    }
+
+    .nameText {
+        font-size: 3em;
+    }
+
+    .planet {
+        width: 80%;
+        height: 50%;
+    }
 }

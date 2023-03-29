@@ -1,6 +1,7 @@
 "use client"
 
 import { useRef, useState, useMemo, useEffect } from 'react'
+import { isMobile } from "react-device-detect";
 import { Inter } from 'next/font/google'
 import './page.css'
 
@@ -11,12 +12,11 @@ import About from '../../components/about/About'
 import Contact from '../../components/contact/Contact'
 import Stars from '../../components/stars/Stars'
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [current, setCurrent] = useState("welcome");
   const [currentPos, setCurrentPos] = useState(0);
-  const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(900);
   const queue = ['welcome', 'about', 'work', 'contact'];
 
   const bodyRef = useRef();
@@ -25,19 +25,17 @@ export default function Home() {
   const workRef = useRef();
   const contactRef = useRef();
 
-
   function handleWindowSizeChange() {
-      setWidth(window.innerWidth);
+    setWidth(window.innerWidth);
   }
 
   useEffect(() => {
+      setWidth(window.innerWidth)
       window.addEventListener('resize', handleWindowSizeChange);
       return () => {
           window.removeEventListener('resize', handleWindowSizeChange);
       }
   }, []);
-  
-  const isMobile = width <= 768;
 
   const scrollTo = (ref, curr) => {
     // setCurrent(curr)
@@ -63,12 +61,12 @@ export default function Home() {
 
   return (
     <main>
-      {isMobile ?
+      {isMobile || width <= 800 ?
         <div style={{height: '100%'}}>
           <div className="starContainer">
             {starDisplay}
           </div>
-          <h1 style={{textAlign: 'center', paddingTop: '50%'}}>Mobile version coming soon!</h1>
+          <h1 style={{textAlign: 'center', paddingTop: '50%'}}>Mobile responsive version coming soon!</h1>
         </div>
       :
       <>

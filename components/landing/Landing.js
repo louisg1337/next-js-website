@@ -28,15 +28,14 @@ export default function Landing({name}) {
                         wrapper="div"
                         cursor={true}
                         repeat={Infinity}
+                        style={{ fontSize: "clamp(1rem, 8vw, 3rem)", color: '#FF8484', fontFamily: 'Arial', textDecorationLine:'underline', fontWeight: 'bold'}}
                         className="typeAnimation"
                         />
                     </div>
                     <div className='introTextWrapper'>
                         <p className="introText">
-                            I am currently a student at Boston University studying computer science. 
-                            I have a passion for creating applications to make someones, or my own, ideas come to life. 
-                            Learning is something I am also passionate about, as I always challenge myself to learn new frameworks
-                            and hone my skills.
+                            I am a passionate computer science enthusiast who is constantly pushing himself to achieve more
+                            by constanty learning and challenging himself with new projects.
                         </p>
                     </div>
                 </motion.div>

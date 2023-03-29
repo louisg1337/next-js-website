@@ -3,7 +3,7 @@ export const workData = [
         title: "Ocean Blue",
         role: "Tech Lead",
         description: "Led a team student driven software engineering team to create an app for nonprofit Ocean Blue. We used React Native with Expo as the primary frontend framework, in conjunction with a Node and Express backend. Along with leading, I also took part in primarily developing the backend functionality of the app.",
-        technologies: ["React Native", "CosmosDB", "Expo", "MongoDB", "Node.js", "Express"],
+        technologies: ["React Native", "Expo", "CosmosDB", "MongoDB", "Node", "Express"],
     },
     {
         title: "Portfolio",
@@ -15,7 +15,7 @@ export const workData = [
         title: "Roommate App",
         role: "Personal Project",
         description: "This project was intended to be an app where you could keep track of the \"state\" of your room, aka who is in there, what chores need to be done, etc. I ended up creating the backend framework of it, which included a functioning user sytsem, room creation/joining, along with being able to post a status update to your room.",
-        technologies: ["React Native", "Firebase", "Expo", "Redux"],
+        technologies: ["React Native", "Expo", "Firebase", "Redux"],
     },
     {
         title: "Brighter Days",
@@ -27,6 +27,6 @@ export const workData = [
         title: "Long Distance",
         role: "Personal Project",
         description: "This project was meant to be used for long distance couples to connect with eachother despite the incredible distance between them. I developed the backend framework for user generation and requesting/joining groups with other members.  ",
-        technologies: ["React Native", "Firebase", "Expo"],
+        technologies: ["React Native", "Expo", "Firebase"],
     },
 ]

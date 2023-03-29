@@ -8,8 +8,6 @@ export default function Picker({welcomeRef, aboutRef, workRef, contactRef, scrol
     return (
         <div className='pickerContainer'>
             {data.map(({item, ref}, key) => {
-                console.log(item)
-                console.log(ref)
                 return (
                     <Node key={key} name={item} ref={ref} scrollTo={scrollTo} current={current}/>
                 )
