@@ -29,4 +29,10 @@ export const workData = [
         description: "This project was meant to be used for long distance couples to connect with eachother despite the incredible distance between them. I developed the backend framework for user generation and requesting/joining groups with other members.  ",
         technologies: ["React Native", "Expo", "Firebase"],
     },
+    {
+        title: "Date Planner",
+        role: "Class Project",
+        description: "Date planner is a class project where you can receive activity recommendations in a certain city based on parameters given. We used Google OAuth for the user authentication, Yelp and a weather API to create the recommendations, and then SQL to save past activities recommended. My team and I used a waterfall methodology to develop this app.",
+        technologies: ["Django", "SQL", "HTML/CSS", "Javascript"]
+    }
 ]
